@@ -1,0 +1,22 @@
+@font-face {
+  font-family: LCD;
+  src: url(./LCDBOLD.woff);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: #1F2833;
+  --color-primary: #66fcf1;
+  --color-secondary: #45A29E;
+  --color-accent: #5ad439;
+
+}
+body {
+  min-height: 100vh;
+  background: var(--color-background);
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}

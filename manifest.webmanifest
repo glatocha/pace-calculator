@@ -1,0 +1,16 @@
+{
+    "background_color": "darkgrey",
+    "description": "Calculating running time for selected pace",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "./favicon.png",
+        "sizes": "64x64",
+        "type": "image/png",
+        "purpose": "any"
+      }
+    ],
+    "name": "Pace Calculator",
+    "short_name": "Pace Calculator",
+    "start_url": "./index.html"
+  }

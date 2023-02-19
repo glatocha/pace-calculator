@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Pace calculator</title>
+  </head>
+  <body>
+    <main>
+      <section class="dial-section" id="dial">
+        <div class="knob" id="knob">
+          <div id="knobText">
+            <p class="lcd-big" id="paceValue">5:41</p>
+            <small class="lcd-small">min/km</small>
+          </div>
+        </div>
+      </section>
+      <section class="calculation-section">
+        <table>
+          <tr>
+            <td class="lcd-table">Speed</td>
+            <td class="lcd-table" id="speed">10 km/h</td>
+          </tr>
+          <tr>
+            <td class="lcd-table">5km</td>
+            <td class="lcd-table" id="time5k">26:23</td>
+          </tr>
+          <tr>
+            <td class="lcd-table">10km</td>
+            <td class="lcd-table" id="time10k">42:15</td>
+          </tr>
+          <tr>
+            <td class="lcd-table">1/2 M</td>
+            <td class="lcd-table" id="timeHM">1:52:34</td>
+          </tr>
+          <tr>
+            <td class="lcd-table">Marathon</td>
+            <td class="lcd-table" id="timeM">4:12:00</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
