@@ -1,0 +1,148 @@
+@import './base.css';
+
+/* * {
+    border: 2px pink dashed;
+} */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    width: 100%;
+    /* margin: 0 auto; */
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin-bottom: 2em; */
+    /* flex: 1 0 0; */
+}
+
+section {
+    margin-top: 2em;
+}
+
+
+
+.knob {
+
+    width: 90%;
+    touch-action: none;    
+
+    background-color: dimgrey;
+    border-radius: 50%;
+    border: 7px dotted aquamarine;
+    background-clip: padding-box;
+
+    cursor: grab;
+    box-shadow: inset #66fcf182 2px 3px 6px 0px;
+
+    position: relative;
+}
+
+.knob::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+.knob.grabbed{
+    cursor: grabbing;
+}
+
+#knobText{
+    text-align: center;
+    user-select: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+table {
+    border-collapse: separate;
+    /* border-spacing: 20px 0; */
+    width: 90%;
+    min-width: 300px;
+}
+
+td {
+padding: 4px 0;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+.lcd-big {
+    font-family: LCD;
+    color: var(--color-primary);
+    font-size: 7rem;
+}
+
+.lcd-small {
+    font-family: LCD;
+    color: var(--color-primary);
+    font-size: 3rem;    
+}
+
+.lcd-table {
+    font-family: LCD;
+    color: var(--color-secondary);
+    font-size: 2rem;    
+}
+
+tr:first-of-type .lcd-table {
+    color: var(--color-accent);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+@media (orientation: landscape) and (max-height: 300px) {
+    .knob {
+        width: 250px;
+        height: 250px;
+    }            
+}
+@media (orientation: landscape) and (min-height: 300px) {
+    .knob {
+        width: 300px;
+        height: 300px;
+    }            
+}
+
+@media (orientation: landscape)  {
+    main {
+      flex-direction: row;
+      max-width: 800px;
+      max-height: 450px;
+      margin: auto;
+    }
+
+    .calculation-section {
+        flex: 1 0 0;
+    }
+
+    section {
+        margin-top: 0;
+    }
+    section + section {
+        margin-left: 2em;
+    }
+  }
+  
+  @media (orientation: portrait) {
+    body {
+      flex-direction: column;
+    }
+
+    .knob::before{
+        padding-bottom: 100%;
+    }
+  }

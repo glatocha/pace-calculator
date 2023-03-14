@@ -4,11 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- for PWA functionality and installation possibility -->
+    <link rel="apple-touch-icon" href="./assets/favicon_192.png" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="main.css" />
+    <meta name="apple-mobile-web-app-status-bar" content="#1F2833" />
+    <meta name="theme-color" content="#1F2833" />
+    <!-- TITLE -->
     <title>Pace calculator</title>
+    <style>
+      @font-face {
+        font-family: LCD;
+        src: local("LCD"), url("/css/lcdbold.woff") format("woff");
+      }
+    </style>
   </head>
   <body>
     <main>
@@ -45,6 +56,7 @@
         </table>
       </section>
     </main>
+    <script src="pwa.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

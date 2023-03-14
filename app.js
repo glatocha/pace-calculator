@@ -15,8 +15,8 @@ let pace = 341;
 updateCalculations(pace);
 
 knob.addEventListener("pointerdown", (e) => {
-  console.log("e :>> ", e);
-  console.log(posPolar(knob, e));
+  // console.log("e :>> ", e);
+  // console.log(posPolar(knob, e));
   angleStore = posPolar(knob, e).angle;
   knob.addEventListener("pointermove", handlingMoving);
   knob.classList.add("grabbed");
@@ -35,11 +35,11 @@ function handlingMoving(e) {
   else if (angleChange < -180) angleChange = 360.0 - angleChange;
 
   if (angleChange > degToChange) {
-    console.log("+");
+    // console.log("+");
     pace += valueChange;
     angleStore = angle;
   } else if (angleChange < -1 * degToChange) {
-    console.log("-");
+    // console.log("-");
     pace -= valueChange;
     angleStore = angle;
   }
@@ -77,13 +77,13 @@ function secToMinSec(sec) {
 }
 
 function secToHrsMinSec(sec) {
-  console.log("sec :>> ", sec);
+  // console.log("sec :>> ", sec);
   const hrs = Math.floor(sec / 3600);
   const min = Math.floor((sec % 3600) / 60)
     .toString()
     .padStart(2, "0");
   const seconds = (sec % 60).toString().padStart(2, "0");
-  console.log("seconds :>> ", seconds);
+  // console.log("seconds :>> ", seconds);
   return `${hrs}:${min}:${seconds}`;
 }
 

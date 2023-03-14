@@ -1,7 +1,7 @@
-@font-face {
+/* @font-face {
   font-family: LCD;
-  src: url(./LCDBOLD.woff);
-}
+  src: local('LCD'), url('/lcdbold.woff') format('woff');
+} */
 
 /* semantic color variables for this project */
 :root {
@@ -12,11 +12,15 @@
 
 }
 body {
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   background: var(--color-background);
-  margin: 0;
+  margin: 0 0 0 0;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
 }
 
-* {
+*, *::after, *::before {
   box-sizing: border-box;
 }
